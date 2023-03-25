@@ -1,6 +1,5 @@
-import pytest
 
-from config import Config
+
 from endpoints.categories import Categories
 
 

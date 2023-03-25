@@ -10,7 +10,7 @@ class Categories(BaseApi):
         self.check_status_code(response, expected_status_code)
         list = self.check_json_value_by_key(response, '$.records..name')
         exp_value = self.get_value_from_list(list, expected_category)
-        print(exp_value)
+        return exp_value
 
     def post_categories(self, url, json_schema):
         response = self.post_request(url + self.get_category_endpoint, json_schema)
