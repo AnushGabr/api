@@ -35,4 +35,5 @@ def test_is_product_deleted(app_config):
     product_id = product.getting_products_in_list_in_object_type(app_config.base_url)
     json_schema = create_product_json.json_for_product_update(f'{product_id}', 'berry')
 
-    product.deleting_added_product(app_config.base_url, json_schema)
+    assert product.deleting_added_product(app_config.base_url, json_schema).status_code == 200
+
